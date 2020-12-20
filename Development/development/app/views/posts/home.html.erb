@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+ <head>
+ <title>Connects</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+ <script type="text/javascript">
+$(function() {
+    var pageTop = $('.page-top');
+    pageTop.hide();
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 1500) {
+            pageTop.fadeIn();
+        } else {
+            pageTop.fadeOut();
+        }
+    });
+    pageTop.click(function () {
+        $('body, html').animate({scrollTop:0}, 800, 'swing');
+        return false;
+    });
+});
+</script>
+<a href="#" class="page-top">上に戻る👆</a>
+   <meta charset="UTF-8">
+   <title>トップページ</title>
+   <%= stylesheet_link_tag "home", :media => "all" %>
+ </head>
+ <body>
+
+
+ <header>
+      <h1>Connects</h1>
+      <div class="header-list">
+      <ul>
+      　<li><%= link_to "English", posts_home_en_path %></li>
+        <li><%= link_to "新着順", posts_path %></li>
+        <li><%= link_to "新規投稿", posts_new_path %></li>
+        <% if user_signed_in? %>
+        <li><a href="/users/<%= current_user.id %>">マイページ</a></li>
+        <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+        <% else %>
+        <li><%= link_to "ログイン", new_user_session_path, class: 'post' %> </li>
+        <li><%= link_to "新規登録", new_user_registration_path, class: 'post' %></li>
+        <% end %>
+      
+      </ul>
+      </div>
+    </header>
+   
+
+    <section id="first-block">
+     <p class="info-title">
+     学生・団体が集う場所
+     </p>
+     <p class="info-text">
+     新しいことに挑戦したい人<br>人脈を広げたい人<br>インカレを通してつながってみませんか？
+     </p>
+    <div class=link_to>
+    <%= link_to 'さっそく探す🔎', {controller: 'posts', action: 'index'}, {method: :get }%>
+    </div>
+  
+    </section>
+    <section id="second-block">
+     <p class="info-title">
+     このサイトの使い方
+     </p>
+
+     <div class="main-container">
+
+     <div class="left-eff-container">
+     <div class="left-eff"></div>
+     <a href="#third-block"> 個人で利用する方 </a>
+     </div>
+
+     <div class="right-eff-container">
+     <div class="right-eff"></div>
+     <a href="#forth-block"> 団体で利用する方 </a>
+     </div>
+
+    </section>
+    <section id="third-block">
+     <p class="info-title">
+     個人で利用する方
+     </p>
+    </section>
+    <section id="forth-block">
+    <p class="info-title">
+    団体で利用する方
+    </p>
+    </section>
+    <section id="fifth-block">
+    <p class="info-title">
+    なぜ、インカレなのか？
+    </p>
+    </section>
+
+     <main>
+     <%= yield %>
+     </main>
+    <footer>
+    <p>Copyright © Sho Yoshikawa All Rights Reserved.</p>
+    <%= link_to "お問い合わせ", posts_question_path  %>
+    </footer>
+  </body>
+</html>
+
+
+

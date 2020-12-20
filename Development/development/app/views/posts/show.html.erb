@@ -1,0 +1,142 @@
+<%= stylesheet_link_tag "post-show", :media => "all" %>
+<div class="new-posting2">
+    <p>~投稿詳細~</p>
+</div>
+
+<div class="mypictureshow_wrap">
+<%= image_tag @post.image_url, class: 'mypictureshow' %>
+</div>
+
+<table class="post-detail">
+<tr>
+<th>団体名</th>
+<td><%= @post.title %></td>
+</tr>
+
+<tr>
+<th>大学名</th>
+<td><%= @post.college %></td>
+</tr>
+
+<tr>
+<th>種目</th>
+<td><%= @post.sport %></td>
+</tr>
+
+<tr>
+<th>場所</th>
+<td><%= @post.place %></td>
+</tr>
+
+<tr>
+<th>男女数</th>
+<td>
+１年生 <%= @post.people %>  
+３年生 <%= @post.people3 %>  
+<br>
+２年生 <%= @post.people2 %>  
+４年生 <%= @post.people4 %>
+</td>
+</tr>
+
+<tr>
+<th>活動日</th>
+<td>
+<%= @post.activemonday %> 
+<%= @post.activetuesday %> 
+<%= @post.activewednesday %> 
+<%= @post.activethursday %> 
+<%= @post.activefriday %> 
+<%= @post.activesaturday %> 
+<%= @post.activesunday %> 
+<%= @post.activeday %>
+</td>
+</tr>
+
+
+
+<tr>
+<th>説明文</th>
+<td><%= @post.body %></td>
+</tr>
+
+<tr>
+<th>年会費</th>
+<td><%= @post.money %></td>
+</tr>
+
+<tr>
+<th>飲み会</th>
+<td><%= @post.drink %></td>
+</tr>
+
+<tr>
+<th>代表者SNS</th>
+<td><%= @post.number %></td>
+</tr>
+
+</tbody>
+</table>
+<br>
+<div class="detail">
+<% if @post.user_id == @current_user.id %>
+<%= link_to("→編集へ", edit_post_path(@post.id), {class: "detail-button2"}) %>
+<br><br>　　
+<%= link_to('→投稿を削除', "/posts/#{@post.id}", {method: :delete, data: { confirm: '本当に削除しますか?' },class: "detail-button2"}) %>
+<% end %>
+</div>
+
+<div class="likeandcomment">
+<div class="like-count">
+<h3>いいね⭐ <%= @post.likes.count %></h3>
+
+<% if user_signed_in? %>
+     <% if current_user.already_liked?(@post) %>
+     <%= button_to '⭐をはずす', post_like_path(@post), method: :delete %>
+     <% else %>
+     <%= button_to '⭐をつける', post_likes_path(@post) %>
+<% end %>
+<% else %>
+<% end %>
+</div>
+<div class="comment-count">
+<h3>コメント💬<%= @post.commented_users.count %></h3>
+</div>
+</div>
+
+<br>
+<br>
+
+  <% if user_signed_in? %>
+    <%= form_with(model: [@post, @comment], local: true) do |f| %>
+      <%= f.text_area :comment, size: "40x5", class: "comment-area"%> 
+      <button type="submit" class="submit-comment">コメントする</button>
+    <% end %>
+  <% end %>
+</div>
+
+<% @comments.each do |c| %>
+<div class="comment-wrap">
+<div class="comment-wrap2">
+  <div class="comment-wrap3">
+  <p>
+  　　名前：<%= c.user.name unless c.user.blank? %>
+      <br>
+      <br>
+      コメント：<%= c.comment %>
+      <br>
+      投稿時間：<%= c.created_at %>
+      <br>
+  </p>
+  <% if user_signed_in? %>
+  <%= link_to 'コメント削除', "/posts/#{@post.id} /comments/#{c.id} ", method: :delete %>
+  <% end %>
+      <% end %>
+  </div>
+</div>
+</div>
+<footer>
+<p>Copyright © Sho Yoshikawa All Rights Reserved.</p>
+<%= link_to "Contact me!", posts_question_path  %>
+<%= link_to "English", post_show_en_path %>
+</footer>

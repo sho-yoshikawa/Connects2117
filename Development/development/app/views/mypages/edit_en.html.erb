@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+ <head>
+   <meta charset="UTF-8">
+   <title>mypage-edit</title>
+   <%= stylesheet_link_tag "edit", :media => "all" %>
+ </head>
+ <body>
+ <div class="edit-myaccount">
+<h1>My account</h1> 
+</div>
+
+<%= form_for @user,:url => {:action => :update} do |u| %>
+
+<table class="mypage-edit">
+
+<tbody>
+
+<tr>
+<th>Icon image</th>
+<td>
+
+  <%= u.file_field :image %> 
+  
+</td>
+</tr>
+
+
+<tr>
+<th>Name</th>
+<td>
+
+  <%= u.text_field :name, size: "50x20" %> 
+  
+</td>
+</tr>
+
+
+<tr>
+<th>College/Department/Grade</th>
+<td>
+
+  <%= u.text_field :college, size: "50x20" %> 
+
+</td>
+</tr>
+
+
+<tr>
+<th>Activity date </th>
+<td>
+
+  <%= u.text_field :day, size: "50x20" %> 
+
+</td>
+</tr>
+
+
+<tr>
+<th>Mail address</th>
+<td>
+
+  <%= u.text_field :email, size: "50x20" %> 
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+<button type="submit" class="submit-post">Edit</button>
+<% end %>
+<%= link_to "→Back", show_en_mypages_path, {class: "back-button"} %>
+</body>
+
+<footer>
+<p>Copyright © Sho Yoshikawa All Rights Reserved.</p>
+<%= link_to "お問い合わせはこちら", posts_question_en_path  %>
+<%= link_to "日本語", edit_mypages_path  %>
+</footer>
+</html>

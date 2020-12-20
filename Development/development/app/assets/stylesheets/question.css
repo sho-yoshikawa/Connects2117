@@ -1,0 +1,14 @@
+.question{
+    font-size: 30px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.question-form{
+    margin-left: 165px;
+}
+
+.question a:hover{
+    color: #069e34;
+}

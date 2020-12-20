@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ja">
+ <head>
+ <title>Connects</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+ <script type="text/javascript">
+$(function() {
+    var pageTop = $('.page-top');
+    pageTop.hide();
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 1500) {
+            pageTop.fadeIn();
+        } else {
+            pageTop.fadeOut();
+        }
+    });
+    pageTop.click(function () {
+        $('body, html').animate({scrollTop:0}, 800, 'swing');
+        return false;
+    });
+});
+</script>
+<a href="#" class="page-top">TOP PAGE👆</a>
+   <meta charset="UTF-8">
+   <title>トップページ</title>
+   <%= stylesheet_link_tag "home", :media => "all" %>
+ </head>
+ <body>
+
+ 
+ <header>
+      <h1>Connects</h1>
+      <div class="header-list">
+      <ul>
+      　<li><%= link_to "日本語", posts_home_path %></li>
+        <li><%= link_to "New post", posts_index_en_path %></li>
+        <li><%= link_to "Postings", posts_new_en_path %></li>
+        <% if user_signed_in? %>
+        <li><a href="/users/<%= current_user.id %>/show_en">Mypage</a></li>
+        <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+        <% else %>
+        <li><%= link_to "Log in", new_user_session_path, class: 'post' %> </li>
+        <li><%= link_to "Register", new_user_registration_path, class: 'post' %></li>
+        <% end %>
+      
+      </ul>
+      </div>
+    </header>
+   
+
+    <section id="first-block">
+     <p class="info-title">
+     A place where students and groups gather
+     </p>
+     <p class="info-text">
+     If you want to try new things<br>people who want to expand your network<br>why don't you interact with us?  <!-- '-->
+     </p>
+    <div class=link_to>
+    <%= link_to 'Searching🔎', {controller: 'posts', action: 'index_en'}, {method: :get }%>
+    </div>
+  
+    </section>
+    <section id="second-block">
+     <p class="info-title">
+     How To Use
+     </p>
+
+     <div class="main-container">
+
+     <div class="left-eff-container">
+     <div class="left-eff"></div>
+     <a href="#third-block">Individuals</a>
+     </div>
+
+     <div class="right-eff-container">
+     <div class="right-eff"></div>
+     <a href="#forth-block">For groups</a>
+     </div>
+
+    </section>
+    <section id="third-block">
+     <p class="info-title">
+     For individuals
+     </p>
+     <div class="box30">
+    <div class="box-title">Step.1</div>
+    <p>First of all,<%= link_to "→Click here", posts_index_en_path, {class: "kotirakara"}  %> and Let's find the circle that suits you!!<BR>(Try using useful keyword search:) )</p>
+　　</div>
+<div class="box30">
+<div class="box-title">Step.2</div>
+<p>「<%= link_to "Registration", new_user_registration_path, class: 'kotirakara' %>」to make your account、Comment on the post you care about or send a message to the representative's SNS!!</p>
+　　</div>
+<div class="box30">
+<div class="box-title">Step.3</div>
+<p>「Requests・complaints<%= link_to "→Click here", posts_question_en_path, {class: "kotirakara"}  %>」<br>Let's invite your friends from the shared link in the <%= link_to "Post", posts_index_en_path, {class: "kotirakara"}  %> list!!</p> <%# '%>
+　　</div>
+    </section>
+    <section id="forth-block">
+    <p class="info-title">
+    For groups
+    </p>
+    <div class="box30">
+    <div class="box-title">Step.1</div>
+    <p>「<%= link_to "Registration", new_user_registration_path, class: 'kotirakara' %>」to make your account!!</p>
+　　</div>
+    <div class="box30">
+    <div class="box-title">Step.2</div>
+    <p>Fill in the details of the club you want to recruit from <%= link_to "Postings", posts_new_path, class: 'kotirakara' %> !! </p>
+　　</div>
+    <div class="box30">
+    <div class="box-title">Step.3</div>
+    <p>Edit the post accordingly!<br>If there are people who are interested in the club, the comment will be sent to your SNS!!
+  
+    </p>
+　　</div>
+    </section>
+    <section id="fifth-block">
+    <p class="info-title">
+     About intercollegiate
+    </p>
+    <div class="fifth-block1">
+    College students are a major turning point in life.I have also been influenced by various things and studying programming. Therefore, as a result of taking the questionnaire like "Have you ever thought that encounter or new experiences is important?" to about 30 mentor university students who teach programming, we obtained data to be worried about.
+    </div>
+    <div class="qwertyuiop">
+    </div>
+    <div class="fifth-block2">
+    The results are obvious. Now that the Internet is popular, why don't you join the club and try various things?  <%#'%>
+    </div>
+    <br>
+    <div class=link_to2>
+    <%= link_to 'Searching🔎', {controller: 'posts', action: 'index'}, {method: :get }%>
+    </div>
+    </section>
+
+     <main>
+     <%= yield %>
+     </main>
+    <footer>
+    <p>Copyright © Sho Yoshikawa All Rights Reserved.</p>
+    <%= link_to "Contact me!", posts_question_en_path  %>      　　
+       2020 6/14 Released!!!
+    </footer>
+  </body>
+</html>
+
+
+

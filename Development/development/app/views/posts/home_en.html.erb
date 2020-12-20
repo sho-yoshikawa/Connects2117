@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+ <head>
+ <title>Connects</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+ <script type="text/javascript">
+$(function() {
+    var pageTop = $('.page-top');
+    pageTop.hide();
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 1500) {
+            pageTop.fadeIn();
+        } else {
+            pageTop.fadeOut();
+        }
+    });
+    pageTop.click(function () {
+        $('body, html').animate({scrollTop:0}, 800, 'swing');
+        return false;
+    });
+});
+</script>
+<a href="#" class="page-top">TOP PAGE👆</a>
+   <meta charset="UTF-8">
+   <title>トップページ</title>
+   <%= stylesheet_link_tag "home", :media => "all" %>
+ </head>
+ <body>
+
+
+ <header>
+      <h1>Connects</h1>
+      <div class="header-list">
+      <ul>
+      　<li><%= link_to "日本語", posts_home_path %></li>
+        <li><%= link_to "New post", posts_index_en_path %></li>
+        <li><%= link_to "Postings", posts_new_en_path %></li>
+        <% if user_signed_in? %>
+        <li><a href="/users/<%= current_user.id %>">Mypage</a></li>
+        <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+        <% else %>
+        <li><%= link_to "Log in", new_user_session_path, class: 'post' %> </li>
+        <li><%= link_to "Registration", new_user_registration_path, class: 'post' %></li>
+        <% end %>
+      
+      </ul>
+      </div>
+    </header>
+   
+
+    <section id="first-block">
+     <p class="info-title">
+     A place where students and groups gather
+     </p>
+     <p class="info-text">
+     If you want to try new things<br>people who want to expand your network<br>why don't you interact with us?  <!-- '-->
+     </p>
+    <div class=link_to>
+    <%= link_to 'Searching🔎', {controller: 'posts', action: 'index_en'}, {method: :get }%>
+    </div>
+  
+    </section>
+    <section id="second-block">
+     <p class="info-title">
+     How To Use
+     </p>
+
+     <div class="main-container">
+
+     <div class="left-eff-container">
+     <div class="left-eff"></div>
+     <a href="#third-block">For individuals</a>
+     </div>
+
+     <div class="right-eff-container">
+     <div class="right-eff"></div>
+     <a href="#forth-block">For groups</a>
+     </div>
+
+    </section>
+    <section id="third-block">
+     <p class="info-title">
+     For individuals
+     </p>
+    </section>
+    <section id="forth-block">
+    <p class="info-title">
+    For groups
+    </p>
+    </section>
+    <section id="fifth-block">
+    <p class="info-title">
+     About intercollegiate
+    </p>
+    </section>
+
+     <main>
+     <%= yield %>
+     </main>
+    <footer>
+    <p>Copyright © Sho Yoshikawa All Rights Reserved.</p>
+    <%= link_to "Contact me!", posts_question_en_path  %>
+    </footer>
+  </body>
+</html>
+
+
+

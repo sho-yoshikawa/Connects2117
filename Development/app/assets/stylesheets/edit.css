@@ -1,0 +1,147 @@
+.edit-myaccount h1{
+    text-align: center;
+    font-size: 40px;
+}
+
+.mypage-edit {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 14px;
+    
+    
+}
+
+.new_body{
+    width: 80%;
+    height: 80px;
+}
+
+
+body a{
+    text-decoration: none;
+}
+.back-button{
+    font-size: 35px;
+    color: rgb(26, 161, 26);
+    padding: 10px;
+}
+.back-button:hover{
+    color: rgb(99, 212, 99);
+}
+
+@media screen and (max-width:375px){
+    .edit-myaccount h1{
+        text-align: center;
+        font-size: 40px;
+        padding: 50px;
+        margin-bottom: 80px;
+    }
+    
+    .back-button{
+        font-size: 25px;
+        color: rgb(26, 161, 26);
+        padding: 10px;
+    }
+    .back-button:hover{
+        color: rgb(99, 212, 99);
+    }
+   
+    .mypage-edit table{
+        border-collapse: collapse;
+        width: 100%;
+      }
+    
+    
+  .mypage-body tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+    width: 100%;
+  }
+  
+  tr {
+    display: table-row;
+    vertical-align:inherit;
+    border-color: inherit;
+    width: 100%;
+  }
+  
+  th {
+    width: 20%;
+    height: 20px;
+    background:lightskyblue;
+    border: 1px solid lightskyblue;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+    
+  }
+  
+  td {
+    width: 150px;
+    height: 10px;
+    border: 1px solid lightskyblue;
+    color: black;
+    text-align: center;
+    font-size: 20px;
+  }
+    
+}
+
+@media screen and (max-width:414px){
+    .edit-myaccount h1{
+        text-align: center;
+        font-size: 40px;
+        padding: 50px;
+        margin-bottom: 80px;
+    }
+    
+    .back-button{
+        font-size: 25px;
+        color: rgb(26, 161, 26);
+        padding: 10px;
+    }
+    .back-button:hover{
+        color: rgb(99, 212, 99);
+    }
+   
+    .mypage-edit table{
+        border-collapse: collapse;
+        width: 100%;
+      }
+    
+    
+  .mypage-body tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+    width: 100%;
+  }
+  
+  tr {
+    display: table-row;
+    vertical-align:inherit;
+    border-color: inherit;
+    width: 100%;
+  }
+  
+  th {
+    width: 20%;
+    height: 20px;
+    background:lightskyblue;
+    border: 1px solid lightskyblue;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+    
+  }
+  
+  td {
+    width: 150px;
+    height: 10px;
+    border: 1px solid lightskyblue;
+    color: black;
+    text-align: center;
+    font-size: 20px;
+  }
+}

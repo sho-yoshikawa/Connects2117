@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ja">
+ <head>
+ <title>Connects</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+ <script type="text/javascript">
+$(function() {
+    var pageTop = $('.page-top');
+    pageTop.hide();
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 1500) {
+            pageTop.fadeIn();
+        } else {
+            pageTop.fadeOut();
+        }
+    });
+    pageTop.click(function () {
+        $('body, html').animate({scrollTop:0}, 800, 'swing');
+        return false;
+    });
+});
+</script>
+<a href="#" class="page-top">上に戻る👆</a>
+   <meta charset="UTF-8">
+   <title>トップページ</title>
+   <%= stylesheet_link_tag "home", :media => "all" %>
+ </head>
+ <body>
+
+
+ <header>
+      <h1>Connects</h1>
+      <div class="header-list">
+      <ul>
+      　<li><%= link_to "English", posts_home_en_path %></li>
+        <li><%= link_to "新着順", posts_path %></li>
+        <li><%= link_to "投稿", posts_new_path %></li>
+        <% if user_signed_in? %>
+        <li><a href="/users/<%= current_user.id %>">マイページ</a></li>
+        <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+        <% else %>
+        <li><%= link_to "ログイン", new_user_session_path, class: 'post' %> </li>
+        <li><%= link_to "新規登録", new_user_registration_path, class: 'post' %></li>
+        <% end %>
+      
+      </ul>
+      </div>
+    </header>
+   
+
+    <section id="first-block">
+    <br>
+     <p class="info-title">
+     学生・団体が集う場所
+     </p>
+     <p class="info-text">
+     新しいことに挑戦したい人<br>人脈を広げたい人<br>インカレを通してつながってみませんか？
+     </p>
+    <div class=link_to>
+    <%= link_to 'さっそく探す🔎', {controller: 'posts', action: 'index'}, {method: :get }%>
+    </div>
+  
+    </section>
+    <section id="second-block">
+    <br>
+     <p class="info-title">
+     このサイトの使い方
+     </p>
+
+     <div class="main-container">
+
+     <div class="left-eff-container">
+     <div class="left-eff"></div>
+     <a href="#third-block"> 個人で利用する方 </a>
+     </div>
+
+     <div class="right-eff-container">
+     <div class="right-eff"></div>
+     <a href="#forth-block"> 団体で利用する方 </a>
+     </div>
+
+    </section>
+    <section id="third-block">
+    <br>
+     <p class="info-title">
+     個人で利用する方
+     </p>
+     <div class="box30">
+    <div class="box-title">Step.1</div>
+    <p>まずは、<%= link_to "→ここから", posts_index_path, {class: "kotirakara"}  %>自分に合ったサークルを探そう！！<BR>(便利なキーワード検索があるよ！)</p>
+　　</div>
+<div class="box30">
+<div class="box-title">Step.2</div>
+<p>「<%= link_to "新規登録", new_user_registration_path, class: 'kotirakara' %>」からアカウントを作成、気になるサークルにコメントするか、代表者のSNSにメッセージを送ろう！！</p>
+　　</div>
+<div class="box30">
+<div class="box-title">Step.3</div>
+<p>「ご要望・お問い合わせは<%= link_to "こちらから←", posts_question_path, {class: "kotirakara"}  %>」<br>投稿一覧にある共有リンクから、みんなをさそってみよう！！</p>
+　　</div>
+
+
+    </section>
+    <section id="forth-block">
+    <br>
+    <p class="info-title">
+    団体で利用する方
+    </p>
+    <div class="box30">
+    <div class="box-title">Step.1</div>
+    <p>「<%= link_to "新規登録", new_user_registration_path, class: 'kotirakara' %>」からアカウントを作成しよう！！</p>
+　　</div>
+    <div class="box30">
+    <div class="box-title">Step.2</div>
+    <p><%= link_to "新規投稿", posts_new_path, class: 'kotirakara' %>から、募集したいサークルの詳細を書き込もう！！</p>
+　　</div>
+    <div class="box30">
+    <div class="box-title">Step.3</div>
+    <p>投稿を適宜編集して、サークルを更新しよう！！<br>サークルを気になる人がいれば、コメントがSNSにメッセージが届くよ！！</p>
+　　</div>
+    </section>
+    <section id="fifth-block">
+    <br>
+    <p class="info-title">
+    なぜ、インカレ？
+    </p>
+    <div class="fifth-block1">
+    人生の大きなターニングポイントである、「大学生」。私自身も様々な影響を受け、プログラミングを勉強しています。そこで、プログラミングを教えるメンター大学生３０名程度に以下のアンケートを取った結果、気になるデータが得られました。
+    </div>
+    <div class="qwertyuiop">
+    </div>
+    <div class="fifth-block2">
+    この結果は一目瞭然です。<br>インターネットが普及している今、<br>あなたも「大学生」のうちに様々なことに挑戦してみませんか？↓↓↓↓↓
+    </div>
+    <br><br>
+    <div class=link_to2>
+    <%= link_to 'さっそく探す🔎', {controller: 'posts', action: 'index'}, {method: :get }%>
+    </div>
+    </section>
+
+     <main>
+     <%= yield %>
+     </main>
+     
+    <footer>
+    <p>Copyright © Sho Yoshikawa All Rights Reserved.</p>
+    <%= link_to "お問い合わせ", posts_question_path  %>　　
+    更新日　2020 6/14 
+    </footer>
+  </body>
+  <%# GeekSalon Web28期生　吉川翔　%>
+</html>
+
+
+
+
+

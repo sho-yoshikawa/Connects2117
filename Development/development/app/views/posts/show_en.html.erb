@@ -1,0 +1,117 @@
+<%= stylesheet_link_tag "post-show", :media => "all" %>
+<div class="new-posting">
+    <p>~Post details~</p>
+</div>
+
+<br><br><br>
+
+<table class="post-detail">
+<tr>
+<th>Group name</th>
+<td><%= @post.title %></td>
+</tr>
+
+<tr>
+<th>College name</th>
+<td><%= @post.college %></td>
+</tr>
+
+<tr>
+<th>Activity events</th>
+<td><%= @post.sport %></td>
+</tr>
+
+<tr>
+<th>Place</th>
+<td><%= @post.place %></td>
+</tr>
+
+<tr>
+<th>Number of people</th>
+<td><%= @post.people %></td>
+</tr>
+
+<tr>
+<th>Activity date</th>
+<td><%= @post.activeday %></td>
+</tr>
+
+<tr>
+<th>About us</th>
+<td><%= @post.body %></td>
+</tr>
+
+<tr>
+<th>Annual fee</th>
+<td><%= @post.money %></td>
+</tr>
+
+<tr>
+<th>SNS or Mail address</th>
+<td><%= @post.number %></td>
+</tr>
+
+</tbody>
+</table>
+<div class="detail">
+<% if user_signed_in? %>
+<%= link_to("→Edit", post_edit_en_path(@post.id), {class: "detail-button"}) %>    
+<% end %>
+</div>
+
+<div class="likeandcomment">
+<div class="like-count">
+<h3>Good!⭐ <%= @post.likes.count %></h3>
+
+<% if user_signed_in? %>
+     <% if current_user.already_liked?(@post) %>
+     <%= button_to 'Remove good', post_like_path(@post), method: :delete %>
+     <% else %>
+     <%= button_to 'Good!', post_likes_path(@post) %>
+<% end %>
+<% else %>
+<% end %>
+</div>
+<div class="comment-count">
+<h3>Comments💬<%= @post.commented_users.count %></h3>
+</div>
+</div>
+
+<br>
+<br>
+
+  <% if user_signed_in? %>
+    <%= form_with(model: [@post, @comment], local: true) do |f| %>
+      <%= f.text_area :comment, size: "40x5", class: "comment-area"%> 
+      <button type="submit" class="submit-comment">comment</button>
+    <% end %>
+  <% end %>
+</div>
+
+<% @comments.each do |c| %>
+<div class="balloon6">
+<div class="chatting">
+  <div class="says">
+  <p>
+  　　Name：<%= c.user.name unless c.user.blank? %>
+      <br>
+      <br>
+      Comment：<%= c.comment %>
+      <br>
+      Post date：<%= c.created_at %>
+      <br>
+  </p>
+  <% if user_signed_in? %>
+  <%= link_to 'Delete comment', "/posts/#{@post.id} /comments/#{c.id} ", method: :delete %>
+  <% end %>
+      <% end %>
+  </div>
+</div>
+</div>
+
+<footer>
+<p>Copyright © Sho Yoshikawa All Rights Reserved.</p>
+<%= link_to "Contact me!", posts_question_en_path  %>
+<%= link_to "日本語", post_path %>
+</footer>
+

@@ -1,0 +1,193 @@
+[33mcommit 5c09587fc62fb7ca4f417a8012a152a7062da204[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31mheroku/master[m[33m)[m
+Author: sho-yoshikawa <65099731+sho-yoshikawa@users.noreply.github.com>
+Date:   Sat Jun 13 20:04:06 2020 +0900
+
+    リリース準備
+
+[33mcommit 1a718d5cf2381746aacbcf97ae193381329495dd[m
+Author: sho-yoshikawa <65099731+sho-yoshikawa@users.noreply.github.com>
+Date:   Fri Jun 12 22:59:19 2020 +0900
+
+    いけ
+
+[33mcommit 400b767ff6d7795afb3a8a5b4db7ca5d4cc5d9a7[m
+Author: sho-yoshikawa <65099731+sho-yoshikawa@users.noreply.github.com>
+Date:   Fri Jun 12 21:55:28 2020 +0900
+
+    いけ
+
+[33mcommit 90c317c4eb54f907f0fa0927ea1151fa6e16478f[m
+Author: sho-yoshikawa <65099731+sho-yoshikawa@users.noreply.github.com>
+Date:   Fri Jun 12 20:43:45 2020 +0900
+
+    bundle install
+
+[33mcommit 50dd5b5243078f09ea89f2ce3a5f831e2c11382b[m
+Author: sho-yoshikawa <65099731+sho-yoshikawa@users.noreply.github.com>
+Date:   Fri Jun 12 20:36:45 2020 +0900
+
+    bundle install
+
+[33mcommit e479e7b21cf3f948ca1c40123508bcc9e855f09a[m
+Author: sho-yoshikawa <65099731+sho-yoshikawa@users.noreply.github.com>
+Date:   Thu Jun 11 21:33:55 2020 +0900
+
+    Release to heroku
+
+[33mcommit fc3ac64df55d88788a876edb557e2ff1d93c4485[m
+Author: sho-yoshikawa <65099731+sho-yoshikawa@users.noreply.github.com>
+Date:   Thu Jun 11 20:41:43 2020 +0900
+
+    Release to heroku
+
+[33mcommit fcc6fe30fa4597342dd0f8b63fa45b43b6596ac3[m
+Author: sho-yoshikawa <65099731+sho-yoshikawa@users.noreply.github.com>
+Date:   Thu Jun 11 20:38:26 2020 +0900
+
+    Release to heroku
+
+[33mcommit 94f0cc9acbd52ca729223a90eec52ab4e21be426[m
+Author: sho-yoshikawa <65099731+sho-yoshikawa@users.noreply.github.com>
+Date:   Thu Jun 11 20:34:01 2020 +0900
+
+    Release to heroku
+
+[33mcommit d176907baa7a63c7e29d7998d14c9b6b2078e994[m
+Author: sho-yoshikawa <65099731+sho-yoshikawa@users.noreply.github.com>
+Date:   Thu Jun 11 20:14:37 2020 +0900
+
+    Release to heroku
+
+[33mcommit 66bf80964300963f93ea99259cdfce9a0e42b347[m
+Author: sho-yoshikawa <65099731+sho-yoshikawa@users.noreply.github.com>
+Date:   Thu Jun 11 17:05:06 2020 +0900
+
+    Release to heroku
+
+[33mcommit 62d1369cff96071e9f6fa20cfe6bc3a2ddf1e322[m
+Author: sho-yoshikawa <65099731+sho-yoshikawa@users.noreply.github.com>
+Date:   Thu Jun 11 16:48:48 2020 +0900
+
+    Release to heroku
+
+[33mcommit fb88c88f36a769a183f4e581aea3451f3703286f[m
+Author: sho-yoshikawa <65099731+sho-yoshikawa@users.noreply.github.com>
+Date:   Thu Jun 11 16:00:25 2020 +0900
+
+    Release to heroku
+
+[33mcommit 907003c6853a35136a9394c55db1f5561654817d[m
+Author: sho-yoshikawa <65099731+sho-yoshikawa@users.noreply.github.com>
+Date:   Thu Jun 11 14:02:55 2020 +0900
+
+    Release to heroku
+
+[33mcommit 92cd0e13a0021d1551b07de72f33026dc1927361[m
+Author: sho-yoshikawa <65099731+sho-yoshikawa@users.noreply.github.com>
+Date:   Thu Jun 11 09:13:30 2020 +0900
+
+    Release to heroku
+
+[33mcommit 01513c2e3f31752f79af867dc70cb1055ad44de1[m
+Author: sho-yoshikawa <65099731+sho-yoshikawa@users.noreply.github.com>
+Date:   Tue Jun 9 21:46:33 2020 +0900
+
+    Release to heroku
+
+[33mcommit 23a17de2d3e80c05c79a2625353a13ea69e9a3cc[m
+Author: sho-yoshikawa <65099731+sho-yoshikawa@users.noreply.github.com>
+Date:   Tue Jun 9 19:51:05 2020 +0900
+
+    Release to heroku
+
+[33mcommit 8b82880149804331c2631c8717984eb346f94e6b[m
+Author: sho-yoshikawa <65099731+sho-yoshikawa@users.noreply.github.com>
+Date:   Tue Jun 9 19:44:39 2020 +0900
+
+    Release to heroku
+
+[33mcommit d7d7634ea497646fd4f6bbff7746f75723a4eca0[m
+Author: sho-yoshikawa <65099731+sho-yoshikawa@users.noreply.github.com>
+Date:   Tue Jun 9 19:32:23 2020 +0900
+
+    Release to heroku
+
+[33mcommit c8c8c467c559cc91a424d2e24c8bf2349e7a2afc[m
+Author: sho-yoshikawa <65099731+sho-yoshikawa@users.noreply.github.com>
+Date:   Mon Jun 8 18:57:14 2020 +0900
+
+    Release to heroku
+
+[33mcommit d58ff88a01eb3cc1e09a7ec9ea397d9481acb2f7[m
+Author: sho-yoshikawa <65099731+sho-yoshikawa@users.noreply.github.com>
+Date:   Mon Jun 8 12:18:27 2020 +0900
+
+    Release to heroku
+
+[33mcommit a536fc08c0333622b77dcba8b02c23ff4ac13506[m
+Author: sho-yoshikawa <65099731+sho-yoshikawa@users.noreply.github.com>
+Date:   Mon Jun 8 00:24:43 2020 +0900
+
+    Release to heroku
+
+[33mcommit e7e966a11d79e586c7e0b72ee397bd79f8df355e[m
+Author: sho-yoshikawa <65099731+sho-yoshikawa@users.noreply.github.com>
+Date:   Sun Jun 7 20:53:25 2020 +0900
+
+    Release to heroku
+
+[33mcommit 987eae4a0a822c2ee4d4e4b3f9de5d84a4db442f[m
+Author: sho-yoshikawa <65099731+sho-yoshikawa@users.noreply.github.com>
+Date:   Sun Jun 7 20:45:32 2020 +0900
+
+    Release to heroku
+
+[33mcommit 51eee2ac93a1d6cbfb98357478118b5bf86b8758[m
+Author: sho-yoshikawa <65099731+sho-yoshikawa@users.noreply.github.com>
+Date:   Sun Jun 7 20:04:04 2020 +0900
+
+    Release to heroku
+
+[33mcommit 8348d0a553f39ce97a1e9b072006d8dd25624dc8[m
+Author: sho-yoshikawa <65099731+sho-yoshikawa@users.noreply.github.com>
+Date:   Sun Jun 7 19:53:49 2020 +0900
+
+    Release to heroku
+
+[33mcommit 0bc67881f53ba1d980572e75d6684bedbf333804[m
+Author: sho-yoshikawa <65099731+sho-yoshikawa@users.noreply.github.com>
+Date:   Sun Jun 7 18:43:57 2020 +0900
+
+    Release to heroku
+
+[33mcommit c31033a6e6c649eb290442f1c9753faba6b6455c[m
+Author: sho-yoshikawa <65099731+sho-yoshikawa@users.noreply.github.com>
+Date:   Sun Jun 7 18:34:24 2020 +0900
+
+    Release to heroku
+
+[33mcommit e7bf116d6ab1faf20338f424d21c17d7f24c51d6[m
+Author: sho-yoshikawa <65099731+sho-yoshikawa@users.noreply.github.com>
+Date:   Sun Jun 7 18:14:28 2020 +0900
+
+    Release to heroku
+
+[33mcommit 749ba0c8e14de0a187d5a43039d893d3c2c8182a[m
+Author: sho-yoshikawa <65099731+sho-yoshikawa@users.noreply.github.com>
+Date:   Sun Jun 7 18:01:48 2020 +0900
+
+    Release to heroku
+
+[33mcommit 6a16cdbd79625e66b9ce341025e9cb75c4dcb9be[m
+Author: sho-yoshikawa <65099731+sho-yoshikawa@users.noreply.github.com>
+Date:   Sun May 10 14:30:14 2020 +0900
+
+    home
+    
+    g
+
+[33mcommit 7c1e20127c1fd3cc68f8dec2cb5f3b75e0d94417[m
+Author: sho-yoshikawa <65099731+sho-yoshikawa@users.noreply.github.com>
+Date:   Sun May 10 11:59:41 2020 +0900
+
+    Initial commit
