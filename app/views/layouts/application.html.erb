@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+ <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Connects</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+
+
+  <div class="menu-nav">
+  <div id="menu-sidenav" class="sidenav">
+  <%= link_to("ホーム", posts_home_path, {class: "home"}) %>
+  <%= link_to("検索する", posts_index_path, {class: "search"}) %>
+  <%= link_to("投稿する", posts_new_path, {class: "new-post"}) %>
+  <% if user_signed_in? %>
+  <a class="mypages" href="/users/<%= current_user.id %>">マイページ</a>
+  <%= link_to("ログアウト", destroy_user_session_path, { method: :delete, data: {confirm: "ログアウトしますか？"}, class: "logout"}) %>
+        <% else %>
+  <%= link_to("ログイン", new_user_session_path, {class: "login"}) %>
+  <%= link_to("新規登録", new_user_registration_path, {class: "registration"}) %>
+        <% end %>
+  
+  </div>
+  </div>
+
+
+     <main>
+     <%= yield %>
+     </main>
+   
+  </body>
+</html>
